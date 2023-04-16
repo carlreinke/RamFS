@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+
+    <LangVersion>10.0</LangVersion>
+    <Features>strict</Features>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <AdditionalFiles Include="ExceptionAdjustments.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="winfsp-msil">
+      <HintPath>$(MSBuildProgramFiles32)\WinFsp\bin\winfsp-msil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Nullable" Version="1.3.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+    <PackageReference Include="Tetractic.CodeAnalysis.ExceptionAnalyzers" Version="1.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Tetractic.CommandLine" Version="1.2.0" />
+  </ItemGroup>
+
+</Project>

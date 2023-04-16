@@ -1,0 +1,9 @@
+﻿# This file adjusts exception information used by Tetractic.CodeAnalysis.ExceptionAnalyzers.
+# Usage: <memberId>[ <accessor>] (-/+)<exceptionTypeId>
+# See ECMA-334, 5th Ed. § D.4.2 "ID string format" for a description of the ID format.
+
+M:System.Array.Copy(System.Array,System.Int32,System.Array,System.Int32,System.Int32) -T:System.ArrayTypeMismatchException
+M:System.Array.Copy(System.Array,System.Int32,System.Array,System.Int32,System.Int32) -T:System.RankException
+P:System.Array.Length get -T:System.OverflowException
+M:System.Diagnostics.Debugger.Break -T:System.Security.SecurityException
+M:System.ValueType.ToString +T:System.OutOfMemoryException
